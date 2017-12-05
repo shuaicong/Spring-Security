@@ -9,9 +9,9 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 
 
-@Target({ElementType.METHOD, ElementType.FIELD})
-@Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = MyConstraintValidator.class)
+@Target({ElementType.METHOD, ElementType.FIELD}) //注解标注在方法和字段上
+@Retention(RetentionPolicy.RUNTIME) //运行时的注解
+@Constraint(validatedBy = MyConstraintValidator.class) //当前注解是用于校验 ，用什么类注解
 public @interface MyConstraint {
 
 	String message();

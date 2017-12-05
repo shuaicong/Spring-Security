@@ -7,6 +7,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.imooc.service.HelloService;
 
@@ -15,6 +16,7 @@ import com.imooc.service.HelloService;
  * @作者: alter
  * @时间：2017年11月26日 下午12:03:18
  */
+//实现了implements ConstraintValidator 不用 @Component
 public class MyConstraintValidator implements ConstraintValidator<MyConstraint, Object> {
 
 	@Autowired
